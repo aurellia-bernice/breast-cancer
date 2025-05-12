@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Breast Cancer Prediction</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>🔮 Breast Cancer Prediction</h1>
+
+      <form method="POST" action="/">
+        <label
+          >Your Name:
+          <input type="text" name="user_name" required />
+        </label>
+        <label
+          >Mean Concavity:
+          <input type="number" step="any" name="mean_concavity" required />
+        </label>
+        <label
+          >Worst Area:
+          <input type="number" step="any" name="worst_area" required />
+        </label>
+        <label
+          >Worst Concave Points:
+          <input
+            type="number"
+            step="any"
+            name="worst_concave_points"
+            required
+          />
+        </label>
+        <label
+          >Worst Radius:
+          <input type="number" step="any" name="worst_radius" required />
+        </label>
+        <label
+          >Area Error:
+          <input type="number" step="any" name="area_error" required />
+        </label>
+        <label
+          >Worst Concavity:
+          <input type="number" step="any" name="worst_concavity" required />
+        </label>
+        <label
+          >Mean Concave Points:
+          <input type="number" step="any" name="mean_concave_points" required />
+        </label>
+        <label
+          >Worst Symmetry:
+          <input type="number" step="any" name="worst_symmetry" required />
+        </label>
+        <label
+          >Radius Error:
+          <input type="number" step="any" name="radius_error" required />
+        </label>
+        <label
+          >Worst Texture:
+          <input type="number" step="any" name="worst_texture" required />
+        </label>
+
+        <button type="submit">Predict</button>
+      </form>
+    </div>
+  </body>
+</html>

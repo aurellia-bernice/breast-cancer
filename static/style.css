@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #121212;
+  color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: #1e1e1e;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+  max-width: 500px;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  color: #f39c12;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="number"] {
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: none;
+  background: #2c2c2c;
+  color: #fff;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px;
+  background: #f39c12;
+  color: #1e1e1e;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #d35400;
+}
+
+.alert {
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.alert.success {
+  background-color: #2e7d32;
+  color: #c8e6c9;
+}
+
+.alert.danger {
+  background-color: #c62828;
+  color: #ffcdd2;
+}
+
+.result {
+  margin-bottom: 20px;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1.1em;
+  color: #f1c40f;
+}
