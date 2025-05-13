@@ -2,66 +2,106 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Breast Cancer Prediction</title>
     <link rel="stylesheet" href="/static/style.css" />
   </head>
   <body>
     <div class="container">
-      <h1>🔮 Breast Cancer Prediction</h1>
+      <h1>Breast Cancer Prediction</h1>
 
-      <form method="POST" action="/">
-        <label
-          >Your Name:
-          <input type="text" name="user_name" required />
-        </label>
-        <label
-          >Mean Concavity:
-          <input type="number" step="any" name="mean_concavity" required />
-        </label>
-        <label
-          >Worst Area:
-          <input type="number" step="any" name="worst_area" required />
-        </label>
-        <label
-          >Worst Concave Points:
-          <input
-            type="number"
-            step="any"
-            name="worst_concave_points"
-            required
-          />
-        </label>
-        <label
-          >Worst Radius:
-          <input type="number" step="any" name="worst_radius" required />
-        </label>
-        <label
-          >Area Error:
-          <input type="number" step="any" name="area_error" required />
-        </label>
-        <label
-          >Worst Concavity:
-          <input type="number" step="any" name="worst_concavity" required />
-        </label>
-        <label
-          >Mean Concave Points:
-          <input type="number" step="any" name="mean_concave_points" required />
-        </label>
-        <label
-          >Worst Symmetry:
-          <input type="number" step="any" name="worst_symmetry" required />
-        </label>
-        <label
-          >Radius Error:
-          <input type="number" step="any" name="radius_error" required />
-        </label>
-        <label
-          >Worst Texture:
-          <input type="number" step="any" name="worst_texture" required />
-        </label>
+      <!-- Flash Messages -->
+      {% with messages = get_flashed_messages(with_categories=true) %} {% if
+      messages %}
+      <ul>
+        {% for category, message in messages %}
+        <li class="flash {{ category }}">{{ message }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %} {% endwith %}
+
+      <form action="/" method="POST">
+        <label for="user_name">Your Name:</label>
+        <input type="text" id="user_name" name="user_name" required /><br />
+
+        <label for="mean_concavity">Mean Concavity:</label>
+        <input
+          type="text"
+          id="mean_concavity"
+          name="mean_concavity"
+          required
+        /><br />
+
+        <label for="worst_area">Worst Area:</label>
+        <input type="text" id="worst_area" name="worst_area" required /><br />
+
+        <label for="worst_concave_points">Worst Concave Points:</label>
+        <input
+          type="text"
+          id="worst_concave_points"
+          name="worst_concave_points"
+          required
+        /><br />
+
+        <label for="worst_radius">Worst Radius:</label>
+        <input
+          type="text"
+          id="worst_radius"
+          name="worst_radius"
+          required
+        /><br />
+
+        <label for="area_error">Area Error:</label>
+        <input type="text" id="area_error" name="area_error" required /><br />
+
+        <label for="worst_concavity">Worst Concavity:</label>
+        <input
+          type="text"
+          id="worst_concavity"
+          name="worst_concavity"
+          required
+        /><br />
+
+        <label for="mean_concave_points">Mean Concave Points:</label>
+        <input
+          type="text"
+          id="mean_concave_points"
+          name="mean_concave_points"
+          required
+        /><br />
+
+        <label for="worst_symmetry">Worst Symmetry:</label>
+        <input
+          type="text"
+          id="worst_symmetry"
+          name="worst_symmetry"
+          required
+        /><br />
+
+        <label for="radius_error">Radius Error:</label>
+        <input
+          type="text"
+          id="radius_error"
+          name="radius_error"
+          required
+        /><br />
+
+        <label for="worst_texture">Worst Texture:</label>
+        <input
+          type="text"
+          id="worst_texture"
+          name="worst_texture"
+          required
+        /><br /><br />
 
         <button type="submit">Predict</button>
       </form>
+
+      {% if prediction %}
+      <div class="result">
+        <h2>Prediction: {{ prediction }}</h2>
+      </div>
+      {% endif %}
     </div>
   </body>
 </html>
